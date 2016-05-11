@@ -23,14 +23,32 @@ http://www.sushifaq.com/sushi-sashimi-info/sushi-terminology/
 
 * About me
 
-OpenBSD User sine April 2014
+.image images/avatar.jpeg _ 100
 
-OpenBSD Developer since Febuary 2016
+OpenBSD User sine April 2014;
 
-Co-Founder of koparo.com
+OpenBSD Developer since Febuary 2016;
 
-Linux user since mid 90's
+Co-Founder of koparo.com;
 
-Interested in infosec, programming & gaming
+Linux user since mid 90's;
+
+Interested in infosec, programming & gaming;
+
+7 years in the banking sector. Wrote Perl, Ruby and other code for a living in the past.
+
 
 * About OpenBSD
+
+Started as a fork of NetBSD in 1995
+
+Mostly known for:
+
+- OpenSSH
+- LibreSSL (no, not OpenSSL)
+- pf
+- carp
+- clockwork releases every 6 months
+- with release songs & artwork
+- more...
+.link https://www.openbsd.org/innovations.html innovations
