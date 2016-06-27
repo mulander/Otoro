@@ -55,17 +55,33 @@ Mostly known for:
 
 * Being MAINTAINER
 
-TODO
+Being a maintainer is more then just getting a piece of software to compile.
+
+- test the software, fully
+- patch for platform best practices (strlcpy, arc4random, pledge)
+- upstream patches
+- proxy bug reports from OpenBSD users to upstream
+- become upstream
+- make choices, cut dependencies, write rc scripts
+
+Don't be afraid to disable features, changing a default wildcard network listen to a localhost one etc.
+
+OpenBSD expects the packagers to care about people using the software.
 
 * Binary packages
 
-TODO
+We expect people to use binary packages. The actual ports system is used by people preparing the ports & building binary packages.
+
+Binary packages are provided for:
+ - the stable release
+ - snapshots of -CURRENT
+
+Ongoing updates for stable releases without going -CURRENT are possible by using
+.link https://stable.mtier.org/ m:tier
+
+Binary package update frequencies depend on the platform, amd64 is out almost daily. You might need to wait longer for others.
 
 * Reviewing port updates
-
-TODO
-
-* AUR vs OpenBSD
 
 TODO
 
