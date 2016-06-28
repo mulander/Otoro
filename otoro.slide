@@ -168,7 +168,7 @@ We do upstream patches and we do annoy upstream with stuff like arc4random.
 
 M. W. Lucas nicely noted on several occasions that OpenBSD is the pressure cooker of the open source ecosystem.
 
-We break our ports tree often, so othr *nix systems can have the nice security features enabled by default.
+We break our ports tree often, so other *nix systems can have the nice security features enabled by default.
 
 * Supporting the project
 
