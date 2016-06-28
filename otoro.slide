@@ -126,15 +126,15 @@ Need a list of all ports depending on lang/go?
 
 Just `pkg_add` `sqlports` and query all the info you need.
 
-* DPB - distributed ports builder
+* DPB & Proot - distributed ports builder & chroot
 
 dpb is used to build ports on a cluster of machines, or on a single machine with several cores. dpb walks the ports tree to figure out dependencies, and starts building ports as soon as it can.
 
+.link https://www.openbsd.org/papers/eurobsdcon_2010_dpb/index.html
 
-* Proot - dpb meets chroot
+we also have a recent addition of proot which is a nice solution combining dpb & chroot.
 
-TODO
-
+.link http://www.undeadly.org/cgi?action=article&sid=20160430163301
 
 * GCC/Clang & Cmake
 
