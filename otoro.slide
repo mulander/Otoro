@@ -83,19 +83,53 @@ Binary package update frequencies depend on the platform, amd64 is out almost da
 
 * Reviewing port updates
 
-TODO
+Two developers need to look at a port at minimum to get it included.
+
+What is often found in a typical port review?
+
+- non-portable constructs (hello bash users)
+- security issues (horrible defaults)
+- tree pollution
+- software crashing
+- regular bugs
+- missing dependencies
+- wrong build options (debug/release)
+
+Worth the time to double check.
 
 * Porting tools
 
-TODO
+- Porting Guide
+.link https://www.openbsd.org/faq/ports/guide.html
+- portcheck
+- portroach
+.link http://portroach.openbsd.org/
+- make port-lib-depends-check
+- make update-plist
+- ktrace
+- gdb (egdb) - for C/C++ based ports
+- portimport (for developers)
+- port-modules
 
 * SQL ports
 
-TODO
+What if you could have the whole ports tree as a single sqlite3 database?
+
+Need a list of all ports depending on lang/go?
+
+    $ sqlite3 /usr/local/share/sqlports "select * from modules where value='lang/go';"
+    devel/go-check-v1|lang/go
+    devel/go-tools|lang/go
+    devel/hub|lang/go
+    net/go-net|lang/go
+    ...
+
+Just `pkg_add` `sqlports` and query all the info you need.
 
 * DPB - distributed ports builder
 
-TODO
+dpb is used to build ports on a cluster of machines, or on a single machine with several cores. dpb walks the ports tree to figure out dependencies, and starts building ports as soon as it can.
+
 
 * Proot - dpb meets chroot
 
@@ -122,9 +156,19 @@ Chromium
 etc
 TODO
 
-* Why Perl?
+* Meaning of ports for OpenBSD?
 
-TODO
+We often turn on intrusive exploit mitigations by default. W^X, ASLR and pledge as quick examples.
+
+The ports tree is a great way to have a large portion of existing software exposed to those mitigations at large.
+
+We might not be as big as your typical Linux distribution, but we are also large enough to get noticed.
+
+We do upstream patches and we do annoy upstream with stuff like arc4random.
+
+M. W. Lucas nicely noted on several occasions that OpenBSD is the pressure cooker of the open source ecosystem.
+
+We break our ports tree often, so othr *nix systems can have the nice security features enabled by default.
 
 * Supporting the project
 
