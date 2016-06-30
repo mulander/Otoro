@@ -1,6 +1,6 @@
 Otoro
 fat tuna in the OpenBSD ports fish-tank
-15:04 2 Jan 2006
+10:50 30 Jun 2016
 Tags: openbsd, ports
 
 Adam Wolk
@@ -25,18 +25,12 @@ http://www.sushifaq.com/sushi-sashimi-info/sushi-terminology/
 
 .image images/avatar.jpeg _ 100
 
-OpenBSD User sine April 2014;
-
-OpenBSD Developer since Febuary 2016;
-
-Co-Founder of koparo.com;
-
-Linux user since mid 90's;
-
-Interested in infosec, programming & gaming;
-
-7 years in the banking sector. Wrote Perl, Ruby and other code for a living in the past.
-
+- OpenBSD User since April 2014;
+- OpenBSD Developer since Febuary 2016;
+- Co-Founder of koparo.com;
+- Linux user since mid 90's;
+- Interested in infosec, programming & gaming;
+- 7 years in the banking sector.
 
 * About OpenBSD
 
@@ -55,7 +49,7 @@ Mostly known for:
 
 * Being MAINTAINER
 
-Being a maintainer is more then just getting a piece of software to compile.
+Being a maintainer is more than just getting a piece of software to compile.
 
 - test the software, fully
 - patch for platform best practices (strlcpy, arc4random, pledge)
@@ -81,6 +75,17 @@ Ongoing updates for stable releases without going -CURRENT are possible by using
 
 Binary package update frequencies depend on the platform, amd64 is out almost daily. You might need to wait longer for others.
 
+* DPB & Proot - distributed ports builder & ports chroot builder
+
+dpb is used to build ports on a cluster of machines, or on a single machine with several cores. dpb walks the ports tree to figure out dependencies, and starts building ports as soon as it.
+
+.link https://www.openbsd.org/papers/eurobsdcon_2010_dpb/index.html Distributed Ports Builds in OpenBSD (Marc Espie EuroBSD 2010)
+
+we also have a recent addition of proot which is a nice solution combining dpb & chroot.
+
+.link http://www.undeadly.org/cgi?action=article&sid=20160430163301 proot: dpb meets chroot
+
+
 * Reviewing port updates
 
 Two developers need to look at a port at minimum to get it included.
@@ -99,17 +104,20 @@ Worth the time to double check.
 
 * Porting tools
 
-- Porting Guide
-.link https://www.openbsd.org/faq/ports/guide.html
+Important resources
+
+.link https://www.openbsd.org/faq/ports/guide.html Porting Guide
+.link http://portroach.openbsd.org/ portroach
+.link http://man.openbsd.org/ man(1)
+
+Important tools
+
 - portcheck
-- portroach
-.link http://portroach.openbsd.org/
-- make port-lib-depends-check
-- make update-plist
+- make port-lib-depends-check | update-plist
 - ktrace
 - gdb (egdb) - for C/C++ based ports
 - portimport (for developers)
-- port-modules
+- man pages: port-modules / bsd.port.mk / ports
 
 * SQL ports
 
@@ -124,7 +132,7 @@ Need a list of all ports depending on lang/go?
     net/go-net|lang/go
     ...
 
-Just `pkg_add` `sqlports` and query all the info you need.
+Just *pkg_add* *sqlports* and query all the info you need.
 
 * Meaning of ports for OpenBSD?
 
@@ -148,9 +156,10 @@ Hands on - porting routersploit
 
 * Supporting the project
 
+.link http://www.openbsdfoundation.org/ The OpenBSD Foundation
+.link http://www.openbsd.org/donations.html OpenBSD Donations
 .link http://openbsdstore.com/ CD's & other swag
 .image images/MUG3.png
 
-.link http://www.openbsdfoundation.org/ The OpenBSD Foundation
 
 Any questions?
